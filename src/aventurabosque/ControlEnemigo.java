@@ -11,23 +11,28 @@ import java.util.Random;
  */
 public class ControlEnemigo {
 
-    private Enemigo[] nombreEnemigo;
+    private String[] descripcionesEnemigos;
+    private int[] vidasPosibles;
 
     public ControlEnemigo() {
-        nombreEnemigo = new Enemigo[]{
-            new Enemigo("Oso "),
-            new Enemigo("Marciano "),
-            new Enemigo("El diavlo "),
-            new Enemigo("La llorona "),
-            new Enemigo("El chupacabras "),
-            new Enemigo("Masiosare "),
-            new Enemigo("Slenderman "),
-            new Enemigo("Crepper ")
+        descripcionesEnemigos = new String[]{
+            "Oso",
+            "Marciano",
+            "El diavlo",
+            "La llorona",
+            "El chupacabras",
+            "Masiosare",
+            "Slenderman",
+            "Crepper"
         };
+        vidasPosibles = new int[]{200, 300, 500};
     }
-      public Enemigo getAleatorio() {
+
+    public Enemigo getAleatorio() {
         Random r = new Random();
-        return nombreEnemigo[r.nextInt(nombreEnemigo.length)];
+        String descripcion = descripcionesEnemigos[r.nextInt(descripcionesEnemigos.length)];
+        int vida = vidasPosibles[r.nextInt(vidasPosibles.length)];
+        return new Enemigo(descripcion, vida);
     }
 
 }

@@ -14,8 +14,8 @@ public class Enemigo {
     private int vida;
     private String descripcion;
 
-    public Enemigo(String descripcion) {
-        this.vida = 100;
+    public Enemigo(String descripcion, int vida) {
+        this.vida = vida;
         this.descripcion = descripcion;
     }
 
