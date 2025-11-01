@@ -1,0 +1,11 @@
+# Archivos compilados de Java
+*.class
+*.jar
+
+# Carpetas generadas por NetBeans
+/build/
+/dist/
+
+# Archivos privados de NetBeans
+/nbproject/private/
+nbproject/genfiles.properties
