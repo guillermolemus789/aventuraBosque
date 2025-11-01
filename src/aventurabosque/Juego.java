@@ -104,8 +104,10 @@ public class Juego {
                 // Si enemigo murió
                 if (enemigo != null && !enemigo.estaVivo()) {
                     monstruosDerrotados++;
+                    heroe.subirEnergia(25);
                     JOptionPane.showMessageDialog(null,
                             "¡Has derrotado a un monstruo!\n" +
+                            "Ganas 25 de energía.\n" +
                             "Monstruos derrotados: " + monstruosDerrotados);
                 }
 
