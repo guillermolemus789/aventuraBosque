@@ -12,9 +12,13 @@ public class Enemigo {
 
 
     private int vida;
-    public Enemigo() {
+    private String descripcion;
+
+    public Enemigo(String descripcion) {
         this.vida = 100;
+        this.descripcion = descripcion;
     }
+
 
     public void recibirDano(int dano) {
         vida -= dano;
@@ -29,15 +33,9 @@ public class Enemigo {
         return vida;
     }
 
-private String descripcion;
-
-    public Enemigo(String descripcion) {
-        this.descripcion = descripcion;
-    }
-
     public String getDescripcion() {
         return descripcion;
     }
-    
-    
+
+
 }

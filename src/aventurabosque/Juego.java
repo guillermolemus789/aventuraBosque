@@ -36,10 +36,9 @@ public class Juego {
         // Bucle principal
         while (heroe.estaVivo() && monstruosDerrotados < 3) {
 
-            Enemigo enemigo = new Enemigo();
             Escenario esc = controlEscenarios.getAleatorio();
             Acertijo ac = controlAcertijos.getAleatorio();
-           Enemigo ne = controlEnemigos.getAleatorio();
+            Enemigo enemigo = controlEnemigos.getAleatorio();
             // Mostrar escenario + acertijo
             String respuesta = JOptionPane.showInputDialog(
                     "Escenario: " + esc.getDescripcion() +
@@ -56,8 +55,8 @@ public class Juego {
                 while (enemigo.estaVivo() && heroe.estaVivo()) {
 
                     String opcion = JOptionPane.showInputDialog(
-                            "Aparecio: " + ne.getDescripcion() + "con " + enemigo.getVida() + " de vida\n" +
-                            heroe.getNombre() + 
+                            "Aparecio: " + enemigo.getDescripcion() + "con " + enemigo.getVida() + " de vida\n" +
+                            heroe.getNombre() +
                             "\nVidas: " + heroe.getVidas() +
                             "\nEnergía: " + heroe.getEnergia() +
                             "\n\n¿Qué deseas hacer?\n" +
