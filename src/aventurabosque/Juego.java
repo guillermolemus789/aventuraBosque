@@ -55,7 +55,7 @@ public class Juego {
 
             if (respuesta.equalsIgnoreCase(ac.getRespuesta())) {
 
-                JOptionPane.showMessageDialog(null, "¡Correcto!" );
+                JOptionPane.showMessageDialog(null, "¡Correcto!" , "Bien hecho",  javax.swing.JOptionPane.PLAIN_MESSAGE);
 
                 // Menú mientras el enemigo viva
                 while (enemigo.estaVivo() && heroe.estaVivo()) {
